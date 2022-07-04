@@ -2,6 +2,7 @@ package com.dark.proyectoartistas.service;
 
 import com.dark.proyectoartistas.entity.Artistas;
 import com.dark.proyectoartistas.feignclients.CancionFeignClient;
+import com.dark.proyectoartistas.model.Cancion;
 import com.dark.proyectoartistas.repository.ArtistasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,5 +26,10 @@ public class ArtistasService {
     return artistasRepository.save(artistas);
     }
 
+    public Cancion saveCancion(Long artistaId, Cancion cancion){
+       cancion.setArtistaId(artistaId);
+       Cancion newCancion = cancionFeignClient.saveCancion(cancion);
+        return newCancion;
+    }
 
 }
