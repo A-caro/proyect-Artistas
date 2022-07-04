@@ -6,12 +6,12 @@ spring:
     password: 40975241
 
   cloud:
-    config:
-      enabled: true
-      uri: http://localhost:8081
+   config:
+     enabled: true
+     uri: http://localhost:8081
 
   jpa:
     show-sql: true
     hibernate.ddl-auto: update
   application:
-    name: clientservice
+    name: artistaservice
