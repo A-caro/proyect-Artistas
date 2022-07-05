@@ -13,4 +13,4 @@ spring:
     show-sql: true
     hibernate.ddl-auto: update
   application:
-    name: cancionservice
+    name: cancion-service
