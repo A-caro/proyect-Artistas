@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @FeignClient(name = "cancionservice")
 @RequestMapping("/cancion")
-
 public interface CancionFeignClient {
 
     @PostMapping

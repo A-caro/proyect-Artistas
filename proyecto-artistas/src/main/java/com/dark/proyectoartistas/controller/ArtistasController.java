@@ -4,7 +4,6 @@ import com.dark.proyectoartistas.entity.Artistas;
 import com.dark.proyectoartistas.model.Cancion;
 import com.dark.proyectoartistas.service.ArtistasService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,6 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/artistas")
 public class ArtistasController {
+
     @Autowired
     ArtistasService artistasService;
 
@@ -26,9 +26,9 @@ public class ArtistasController {
         return artistasService.addArtistas(artistas);
     }
 
-    @PostMapping("/saveCnacion/{artistasId}")
-    public ResponseEntity<Cancion> saveCancion(@PathVariable("artistasId") Long artistasId, @RequestBody Cancion cancion){
-        Cancion newCancion = artistasService.saveCancion(artistasId, cancion);
-        return ResponseEntity.ok(cancion);
+    @PostMapping("/saveCancion/{artistaId}")
+    public Cancion saveCancion(@PathVariable("artistaId") Long artistaId, @RequestBody Cancion cancion){
+//        Cancion newCancion = artistasService.saveCancion(artistaId, cancion);
+        return artistasService.saveCancion(artistaId, cancion);
     }
 }
