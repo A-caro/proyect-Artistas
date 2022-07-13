@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @FeignClient(name ="cancion-service")
-@RequestMapping("/cancion")
+@RequestMapping("/canciones")
 public interface CancionFeignClient {
 
     @PostMapping
