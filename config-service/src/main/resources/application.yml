@@ -12,7 +12,7 @@ spring:
       server:
         git:
           default-label: api-gateway
-          uri: https://github.com/hmazaITP/microservices
+          uri: https://github.com/A-caro/proyect-Artistas.git
           search-paths: config-data
   application:
-    name: config-microservice
+    name: config-service
