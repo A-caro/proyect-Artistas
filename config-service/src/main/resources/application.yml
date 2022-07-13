@@ -1,15 +1,18 @@
 server:
   port: 8081
-
-
+  eureka:
+    client:
+      fetch-registry: true
+      register-with-eureka: true
+      service-url:
+        default-zone: http://localhost:8761/eureka
 spring:
   cloud:
     config:
       server:
         git:
           default-label: api-gateway
-          uri: https://github.com/A-caro/proyect-Artistas.git
+          uri: https://github.com/hmazaITP/microservices
           search-paths: config-data
-
   application:
-    name: config-service
+    name: config-microservice
