@@ -28,7 +28,6 @@ public class ArtistasController {
 
     @PostMapping("/saveCancion/{artistaId}")
     public Cancion saveCancion(@PathVariable("artistaId") Long artistaId, @RequestBody Cancion cancion){
-//        Cancion newCancion = artistasService.saveCancion(artistaId, cancion);
         return artistasService.saveCancion(artistaId, cancion);
     }
 }
