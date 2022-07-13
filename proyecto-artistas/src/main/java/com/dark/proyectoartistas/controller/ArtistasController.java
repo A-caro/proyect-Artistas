@@ -30,4 +30,9 @@ public class ArtistasController {
     public Cancion saveCancion(@PathVariable("artistaId") Long artistaId, @RequestBody Cancion cancion){
         return artistasService.saveCancion(artistaId, cancion);
     }
+
+    @GetMapping("/datos")
+    public String getDatos(){
+        return artistasService.getDatos();
+    }
 }

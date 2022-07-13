@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/canciones/canciones.iml" filepath="$PROJECT_DIR$/canciones/canciones.iml" />
       <module fileurl="file://$PROJECT_DIR$/config-service/config-service.iml" filepath="$PROJECT_DIR$/config-service/config-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka.iml" filepath="$PROJECT_DIR$/eureka-server/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway-service/gateway-service/gateway-service.iml" filepath="$PROJECT_DIR$/gateway-service/gateway-service/gateway-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/proyecto-artistas/proyecto-artistas.iml" filepath="$PROJECT_DIR$/proyecto-artistas/proyecto-artistas.iml" />
     </modules>
   </component>

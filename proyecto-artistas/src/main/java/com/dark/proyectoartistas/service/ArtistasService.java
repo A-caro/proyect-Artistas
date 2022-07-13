@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ArtistasService {
@@ -31,6 +32,13 @@ public class ArtistasService {
        Cancion newCancion = cancionFeignClient.saveCancion(cancion);
         return newCancion;
     }
+
+   public String getDatos(){
+        List<Artistas> artistas = artistasRepository.findAll();
+        return artistas.stream()
+                .map(a -> a.getId() + " , " + a.getName() + " , " + a.getSurname())
+                .collect(Collectors.joining("\n"));
+   }
 
 
 }

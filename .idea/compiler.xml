@@ -10,12 +10,14 @@
         <module name="proyecto-artistas" />
         <module name="config-service" />
         <module name="eureka" />
+        <module name="gateway-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="canciones" target="11" />
       <module name="config-service" target="11" />
       <module name="eureka" target="11" />
+      <module name="gateway-service" target="11" />
       <module name="proyecto-artistas" target="11" />
     </bytecodeTargetLevel>
   </component>
@@ -24,6 +26,7 @@
       <module name="canciones" options="-parameters" />
       <module name="config-service" options="-parameters" />
       <module name="eureka" options="-parameters" />
+      <module name="gateway-service" options="-parameters" />
       <module name="proyecto-artistas" options="-parameters" />
     </option>
   </component>
