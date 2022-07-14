@@ -1,5 +1,6 @@
 server:
   port: 8080
+
 eureka:
   client:
     fetch-registry: true
@@ -18,7 +19,7 @@ spring:
           uri: lb://artistaservice
           predicates:
             - Path=/artistas/**
-        - id: cancion-service
+        - id:  cancion-service
           uri: lb://cancion-service
           predicates:
             - Path=/canciones/**
