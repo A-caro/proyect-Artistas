@@ -27,8 +27,14 @@ public class ArtistasService {
     return artistasRepository.save(artistas);
     }
 
-    public Cancion saveCancion(Long artistaId, Cancion cancion){
+ /*   public Cancion saveCancion(Long artistaId, Cancion cancion){
        cancion.setArtistaId(artistaId);
+       Cancion newCancion = cancionFeignClient.saveCancion(cancion);
+        return newCancion;
+    }*/
+
+    public Cancion saveCancion(Long artistaId, Cancion cancion){
+        cancion.setArtistaId(artistaId);
        Cancion newCancion = cancionFeignClient.saveCancion(cancion);
         return newCancion;
     }
