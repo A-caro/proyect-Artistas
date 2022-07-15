@@ -1,6 +1,6 @@
 spring:
   application:
-    name: cancion-service
+    name: subjectservice
   cloud:
     config:
       enabled: true
