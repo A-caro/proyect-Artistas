@@ -1,9 +1,13 @@
 package com.dark.proyectoartistas.controller;
 
+import com.dark.proyectoartistas.entity.Student;
 import com.dark.proyectoartistas.model.Subject;
 import com.dark.proyectoartistas.service.StudentService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/student")
@@ -21,5 +25,9 @@ public class StudentController {
         return ResponseEntity.ok(subject);
     }
 
+    @GetMapping("/subjects/{id}")
+    public ResponseEntity<Map<String, Object>> getSubjectsListByStudent(@PathVariable Long id){
+        return ResponseEntity.ok(studentService.getSubject(id));
+    }
 
 }
