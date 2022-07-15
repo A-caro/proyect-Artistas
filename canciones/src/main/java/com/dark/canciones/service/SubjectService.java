@@ -18,7 +18,6 @@ public class SubjectService {
     }
 
     public Subject saveSubject(Subject subject){
-
         Subject newSubject = subjectRepository.save(subject);
         return newSubject;
     }
