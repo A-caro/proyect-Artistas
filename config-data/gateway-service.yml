@@ -15,11 +15,11 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: artistaservice
-          uri: lb://artistaservice
+        - id: studentservice
+          uri: lb://studentservice
           predicates:
-            - Path=/artistas/**
-        - id:  cancion-service
-          uri: lb://cancion-service
+            - Path=/student/**
+        - id:  subjectservice
+          uri: lb://subjectservice
           predicates:
-            - Path=/canciones/**
+            - Path=/subject/**
