@@ -27,11 +27,19 @@ public class SubjectController {
         Subject subjectNew = subjectService.saveSubject(subject);
         return ResponseEntity.ok(subjectNew);
     }
- //@GetMapping("/byStudent/{id}")
-    @GetMapping("/subject/{id}")
+// //@GetMapping("/byStudent/{id}") /NNNOOO
+@GetMapping("/subject/{id}")
     public ResponseEntity<Optional<List<Subject>>> getSubject(@PathVariable Long id){
         return ResponseEntity.ok(subjectService.getSubject(id));
     }
+
+    @GetMapping("/subject/{id}")
+    public ResponseEntity<Optional<List<Subject>>> getSubjectCorrect(@PathVariable Long studentId){
+        return ResponseEntity.ok(subjectService.getSubjectCorrect(studentId));
+    }
+
+
+
 
 
 

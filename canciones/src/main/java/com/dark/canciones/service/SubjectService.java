@@ -22,9 +22,13 @@ public class SubjectService {
         Subject newSubject = subjectRepository.save(subject);
         return newSubject;
     }
-
+//////////////NO
     public Optional<List<Subject>> getSubject(Long id){
         return subjectRepository.findSubjectByStudentId(id);
+    }
+
+    public Optional<List<Subject>> getSubjectCorrect(Long studentId){
+        return subjectRepository.findSubjectByStudentId(studentId);
     }
 
 

@@ -24,13 +24,18 @@ public class StudentService {
 
     private final StudentRepository studentRepository;
 
-    public Optional<Student> getStudent(Long id){
-        return studentRepository.findById(id);
-    }
-
 
     public StudentService(StudentRepository studentRepository) {
         this.studentRepository = studentRepository;
+    }
+
+
+    public List<Student> getAll(){
+       return studentRepository.findAll();
+    }
+////////metodo simple student por id, para probar q funcionaba bien por el 8080
+    public Optional<Student> getStudent(Long id){
+        return studentRepository.findById(id);
     }
 
 
