@@ -28,12 +28,12 @@ public class SubjectController {
         return ResponseEntity.ok(subjectNew);
     }
 // //@GetMapping("/byStudent/{id}") /NNNOOO
-@GetMapping("/subject/{id}")
-    public ResponseEntity<Optional<List<Subject>>> getSubject(@PathVariable Long id){
-        return ResponseEntity.ok(subjectService.getSubject(id));
-    }
+//@GetMapping("/subject/{id}")
+//    public ResponseEntity<Optional<List<Subject>>> getSubject(@PathVariable Long id){
+//        return ResponseEntity.ok(subjectService.getSubject(id));
+//    }
 
-    @GetMapping("/subject/{id}")
+    @GetMapping("/subject/{studentId}")
     public ResponseEntity<Optional<List<Subject>>> getSubjectCorrect(@PathVariable Long studentId){
         return ResponseEntity.ok(subjectService.getSubjectCorrect(studentId));
     }
