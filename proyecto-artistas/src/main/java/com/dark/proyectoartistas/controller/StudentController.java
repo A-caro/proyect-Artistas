@@ -1,12 +1,10 @@
 package com.dark.proyectoartistas.controller;
 
-import com.dark.proyectoartistas.entity.Student;
 import com.dark.proyectoartistas.model.Subject;
 import com.dark.proyectoartistas.service.StudentService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Map;
 
 @RestController
