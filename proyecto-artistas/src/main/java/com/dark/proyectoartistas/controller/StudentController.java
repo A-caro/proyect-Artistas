@@ -23,8 +23,8 @@ public class StudentController {
         return ResponseEntity.ok(subject);
     }
 
-    @GetMapping("/subjects/{id}")
-    public ResponseEntity<Map<String, Object>> getSubjectsListByStudent(@PathVariable Long id){
+    @GetMapping("/subject/{id}")
+    public ResponseEntity<Map<String, Object>> getSubject(@PathVariable Long id){
         return ResponseEntity.ok(studentService.getSubject(id));
     }
 
