@@ -33,9 +33,9 @@ public class StudentService {
     public List<Student> getAll(){
        return studentRepository.findAll();
     }
-////////metodo simple student por id, para probar q funcionaba bien por el 8080
-    public Optional<Student> getStudent(Long id){
-        return studentRepository.findById(id);
+
+    public Optional<Student> getStudent(Long studentId){
+        return studentRepository.findById(studentId);
     }
 
 
