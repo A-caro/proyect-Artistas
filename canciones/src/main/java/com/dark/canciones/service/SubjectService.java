@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class SubjectService {
@@ -15,6 +16,10 @@ public class SubjectService {
 
     public List<Subject> getAll(){
         return subjectRepository.findAll();
+    }
+
+    public Optional<List<Subject>> getSubjectCorrect(Long studentId){
+        return subjectRepository.findSubjectByStudentId(studentId);
     }
 
     public Subject saveSubject(Subject subject){

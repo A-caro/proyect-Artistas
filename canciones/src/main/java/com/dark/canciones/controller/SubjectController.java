@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/subject")
@@ -19,6 +20,11 @@ public class SubjectController {
     @GetMapping
     public List<Subject> getAll(){
         return subjectService.getAll();
+    }
+
+    @GetMapping("/subject/{studentId}")
+    public ResponseEntity<Optional<List<Subject>>> getSubjectCorrect(@PathVariable Long studentId){
+        return ResponseEntity.ok(subjectService.getSubjectCorrect(studentId));
     }
 
     @PostMapping

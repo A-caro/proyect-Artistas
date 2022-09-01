@@ -19,15 +19,21 @@ public class StudentController {
         this.studentService = studentService;
     }
 
+    @GetMapping()
+    public List<Student> getAll(){
+        return studentService.getAll();
+    }
+
+
     @PostMapping("/saveSubject/{studentId}")
     public ResponseEntity<Subject> saveSubject(@PathVariable("studentId") Long studentId, @RequestBody Subject subject) {
         Subject subjectNew = studentService.saveSubject(studentId, subject);
         return ResponseEntity.ok(subject);
     }
 
-    @GetMapping("/subjects/{id}")
-    public ResponseEntity<Map<String, Object>> getSubjectsListByStudent(@PathVariable Long id){
-        return ResponseEntity.ok(studentService.getSubject(id));
+    @GetMapping("/subject/{studentId}")
+    public ResponseEntity<Map<String, Object>> getSubject(@PathVariable Long studentId){
+        return ResponseEntity.ok(studentService.getSubject(studentId));
     }
 
 }

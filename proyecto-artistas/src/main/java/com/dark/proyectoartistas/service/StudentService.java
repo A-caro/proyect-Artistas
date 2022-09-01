@@ -24,6 +24,8 @@ public class StudentService {
 
     private final StudentRepository studentRepository;
 
+
+
     public Optional<Student> getStudent(Long id){
         return studentRepository.findById(id);
     }
@@ -31,6 +33,11 @@ public class StudentService {
 
     public StudentService(StudentRepository studentRepository) {
         this.studentRepository = studentRepository;
+    }
+
+
+    public List<Student> getAll(){
+        return   studentRepository.findAll();
     }
 
 
