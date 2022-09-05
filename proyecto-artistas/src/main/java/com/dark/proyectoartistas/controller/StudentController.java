@@ -3,6 +3,8 @@ package com.dark.proyectoartistas.controller;
 import com.dark.proyectoartistas.entity.Student;
 import com.dark.proyectoartistas.model.Subject;
 import com.dark.proyectoartistas.service.StudentService;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,9 +33,19 @@ public class StudentController {
         return ResponseEntity.ok(subject);
     }
 
+    @CircuitBreaker(name = "subjectCB", fallbackMethod = "fallBackGetSubject")
     @GetMapping("/subject/{studentId}")
     public ResponseEntity<Map<String, Object>> getSubject(@PathVariable Long studentId){
         return ResponseEntity.ok(studentService.getSubject(studentId));
     }
+
+   public ResponseEntity<List<Subject>> fallBackGetSubject(@PathVariable ("studentId") Long studentId, RuntimeException e ){
+        return new ResponseEntity("El estudiante " + studentId + " no tiene materias asociadas(CB)", HttpStatus.OK);
+   }
+
+
+
+
+
 
 }
