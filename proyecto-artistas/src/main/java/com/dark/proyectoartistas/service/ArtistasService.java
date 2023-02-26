@@ -22,7 +22,7 @@ public class ArtistasService {
         return artistasRepository.findAll();
     }
 
-    public Artistas addArtistas(Artistas artistas){
+    public Artistas addArtistas(Artistas artistas) {
     return artistasRepository.save(artistas);
     }
 
